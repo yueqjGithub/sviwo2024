@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --sviwoPrimary: #0FF3E6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +15,27 @@
   }
 }
 
+html {
+  font-size: calc(100vw / 1920 * 10);
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+@for $i from 1 through 10 {
+  .flex-#{$i} {
+    flex: $i;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scrollbar-width: none;
+  line-height: 1;
 }
