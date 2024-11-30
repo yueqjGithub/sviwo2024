@@ -1,0 +1,1 @@
+export const MENUS = ['Trip', 'Atv', 'Battery', 'Golf', 'Contact']
