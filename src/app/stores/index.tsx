@@ -1,19 +1,19 @@
 'use client'
 
-import { createContext, useState } from "react";
+import { createContext, Dispatch, SetStateAction, useState } from "react";
 
 const Context = createContext<{
-  curHeadBarBg: string,
-  setCurHeadBarBg: (bg: string) => void
+  locale: string,
+  setLocale: Dispatch<SetStateAction<string>>
 }>({
-  curHeadBarBg: '',
-  setCurHeadBarBg: () => {}
+  locale: 'en-US',
+  setLocale: () => { }
 })
 
 const StoreProvider = ({ children }: { children: React.ReactNode }) => {
-  const [curHeadBarBg, setCurHeadBarBg] = useState('transparent')
+  const [locale, setLocale] = useState('en-US')
   return (
-    <Context.Provider value={{ curHeadBarBg: curHeadBarBg, setCurHeadBarBg: setCurHeadBarBg }}>
+    <Context.Provider value={{ locale, setLocale }}>
       {children}
     </Context.Provider>
   )

@@ -4,6 +4,7 @@ import { FC, useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { MENUS } from "./constant";
+import { useRouter } from "next/navigation";
 
 const menuVariants = {
   open: (idx: number) => {
@@ -19,6 +20,7 @@ const menuVariants = {
 
 const IndexPage: FC = () => {
   const [hover, setHover] = useState<typeof MENUS[number]>()
+  const route = useRouter()
   return (
     <div className="w-screen h-screen bg-[#0091DA] relative">
       <Image
@@ -31,10 +33,10 @@ const IndexPage: FC = () => {
       <div className="absolute w-full h-full top-0 left-0 flex flex-col justify-start items-center">
         <div className="w-full px-[45rem] pt-[4.5rem] flex flex-row justify-around items-center">
           {
-            MENUS.map((item, idx) => (<motion.div key={item} custom={idx} className='text-white font-semibold text-[3.6rem] flex-1 flex flex-row justify-center'
+            MENUS.map((item, idx) => (<motion.div key={item} custom={idx} className='text-white text-[2.8rem] flex-1 flex flex-row justify-center'
               variants={menuVariants} initial={{ opacity: 0, y: 100 }} animate="open" onMouseEnter={() => { setHover(item) }} onMouseLeave={() => { setHover(undefined) }}
             >
-              <div className="flex flex-col justify-start items-center w-max cursor-pointer">
+              <div className="flex flex-col justify-start items-center w-max cursor-pointer" onClick={() => { route.push(`/${item.toLowerCase()}`) }}>
                 <div className="pb-3">{item}</div>
                 {
                   hover === item ? (
