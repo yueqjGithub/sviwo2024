@@ -11,7 +11,7 @@ const menuVariants = {
   open: (idx: number) => {
     return {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
         delay: idx * 0.1 + 0.5
       }
@@ -37,16 +37,16 @@ const BuisinessLayout:FC<Readonly<{
           alt="logo"
           width={658}
           height={169}
-          className="w-80 h-auto cursor-pointer"
+          className={`w-80 h-auto cursor-pointer ${['/golf'].includes(pathname) ? 'grayscale brightness-50' : ''}`}
           onClick={() => { route.push('/') }}
         ></Image>
         <div className="flex flex-row justify-start items-center ml-8">
         {
             MENUS.map((item, idx) => (<motion.div key={item} custom={idx} className='text-white text-[2.8rem] flex-1 flex flex-row justify-end pl-48'
-              variants={menuVariants} initial={{ opacity: 0, y: 100 }} animate="open" onMouseEnter={() => { setHover(item) }} onMouseLeave={() => { setHover(undefined) }}
+              variants={menuVariants} initial={{ opacity: 0, x: 50 }} animate="open" onMouseEnter={() => { setHover(item) }} onMouseLeave={() => { setHover(undefined) }}
             >
               <div className="flex flex-col justify-start items-center w-max cursor-pointer" onClick={() => { route.push(`/${item.toLowerCase()}`) }}>
-                <div className="pb-3">{item === 'Contact' ? t('Contact') : item}</div>
+                <div className={`pb-3 ${['/golf'].includes(pathname) ? 'grayscale brightness-50' : ''}`}>{item === 'Contact' ? t('Contact') : item}</div>
                 {
                   (hover === item || pathname === `/${item.toLowerCase()}`) ? (
                     <motion.div className="w-full h-1 bg-[#7A4EEE]" layoutId="underline" animate={{ opacity: 1 }} initial={{ opacity: 0 }}/>
