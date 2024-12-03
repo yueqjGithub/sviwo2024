@@ -14,7 +14,7 @@ const Volt: FC = () => {
         whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} viewport={{ amount: 0.8, once: true }}
       >
         <Image
-          src={'/volt_logo.png'}
+          src={'/volt_logo_w.png'}
           className="w-[48rem] h-auto"
           alt="volt"
           width={480}
@@ -24,7 +24,7 @@ const Volt: FC = () => {
       </motion.div>
       <div className="w-full absolute left-0 bottom-0">
         <motion.div className={`w-full px-96 pt-40 pb-12 bg-[#F16123] text-5xl text-white flex flex-row justify-end items-end ${styles.orangeBar}`}
-          whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: '-100%' }} viewport={{ once: true }} transition={{ duration: 1, ease: 'easeInOut' }}
+          whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: '100%' }} viewport={{ once: true }} transition={{ duration: 1, ease: 'easeInOut' }}
         >www.VOLTCADDY.com</motion.div>
       </div>
     </motion.div>

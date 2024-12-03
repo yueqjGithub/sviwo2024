@@ -6,6 +6,7 @@ import { MENUS } from "../constant";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
+import './layout.scss'
 
 const menuVariants = {
   open: (idx: number) => {

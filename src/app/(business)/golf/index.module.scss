@@ -1,3 +1,17 @@
 .orangeBar {
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
+
+.introSection {
+  .scrollSection {
+    height: calc(108rem - 15.9rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .introSection {
+    .scrollSection {
+      height: calc(100vh - 15.9rem);
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import { FC } from "react";
 import Image from "next/image";
 import Volt from "./volt";
+import FeatureSection from "./feature";
+import IntroSection from "./intro";
 
 const GolfPage:FC = () => {
   return (
@@ -13,7 +15,8 @@ const GolfPage:FC = () => {
         className="w-full h-[108rem] md:h-screen"
       ></Image>
       <Volt></Volt>
-      <div className="w-full h-screen"></div>
+      <FeatureSection></FeatureSection>
+      <IntroSection></IntroSection>
     </div>
   )
 }
