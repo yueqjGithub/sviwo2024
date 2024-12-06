@@ -21,7 +21,7 @@ const RootLayoutProvider: FC<PropsWithChildren> = ({ children }) => {
 
   useEffect(() => {
     let _local = window.navigator.language
-    if (_local.startsWith('es-')) {
+    if (_local.startsWith('es-') || _local === 'es') {
       _local = 'es-ES'
     }
     setLocale(localesDepends.includes(_local) ? _local : 'en-US')

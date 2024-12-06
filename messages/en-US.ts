@@ -1,4 +1,7 @@
 export default {
+  "Common": {
+    "sendMessageSuccess": "Send successfully"
+  },
   "Menu": { // 菜单
     "Contact": "Contact" // 菜单-联系我们
   },
