@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { MENUS } from "./constant";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import LangSwitch from "./components/langSwitch";
 
 const menuVariants = {
   open: (idx: number) => {
@@ -19,6 +21,7 @@ const menuVariants = {
 }
 
 const IndexPage: FC = () => {
+  const t = useTranslations('Menu')
   const [hover, setHover] = useState<typeof MENUS[number]>()
   const route = useRouter()
   return (
@@ -37,7 +40,7 @@ const IndexPage: FC = () => {
               variants={menuVariants} initial={{ opacity: 0, y: 100 }} animate="open" onMouseEnter={() => { setHover(item) }} onMouseLeave={() => { setHover(undefined) }}
             >
               <div className="flex flex-col justify-start items-center w-max cursor-pointer" onClick={() => { route.push(`/${item.toLowerCase()}`) }}>
-                <div className="pb-3">{item}</div>
+                <div className="pb-3">{item === 'Contact' ? t('Contact') : item}</div>
                 {
                   hover === item ? (
                     <motion.div className="w-full h-1 bg-white" layoutId="underline" animate={{ opacity: 1 }} initial={{ opacity: 0 }}/>
@@ -46,6 +49,9 @@ const IndexPage: FC = () => {
               </div>
             </motion.div>))
           }
+          <motion.div layout className="flex-1 flex flex-row justify-end items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+            <LangSwitch currentColor="#fff"></LangSwitch>
+          </motion.div>
         </div>
         <div className="flex-1 w-full flex flex-row justify-center items-center">
           <motion.div className='w-1/4' layout animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }} initial={{ opacity: 0, y: 100 }}>
