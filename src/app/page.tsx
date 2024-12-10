@@ -53,7 +53,7 @@ const IndexPage: FC = () => {
             <LangSwitch currentColor="#fff"></LangSwitch>
           </motion.div>
         </div>
-        <div className="flex-1 w-full flex flex-row justify-center items-center">
+        <div className="flex-1 w-full flex flex-row justify-center items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <motion.div className='w-1/4' layout animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }} initial={{ opacity: 0, y: 100 }}>
             <Image
               src={'/logo.png'}

@@ -1,0 +1,69 @@
+@function getShadows ($n) {
+  $shadows: '#{random(100)}vmax #{random(100)}vmax #fff';
+  $end: floor(calc($n / 4));
+  @for $i from 2 through $end {
+    $shadows: '#{$shadows}, #{random(100)}vmax #{random(100)}vmax #fff';
+  }
+  @for $i from 2 through $end {
+    $shadows: '#{$shadows}, -#{random(100)}vmax -#{random(100)}vmax #fff';
+  }
+  @for $i from 2 through $end {
+    $shadows: '#{$shadows}, -#{random(100)}vmax #{random(100)}vmax #fff';
+  }
+  @for $i from 2 through $end {
+    $shadows: '#{$shadows}, #{random(100)}vmax -#{random(100)}vmax #fff';
+  }
+  @return unquote($shadows);
+}
+
+
+
+.overflow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  left: 0;
+  top: 0;
+  .container {
+    width: 150vmax;
+    height: 150vmax;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .layer {
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      // animation: skyRotate 10s linear infinite reverse;
+    }
+    $duration: 1600s;
+    $count: 5000;
+    @for $i from 1 through 3 {
+      $duration: calc($duration / 2);
+      $count: floor(calc($count / 2));
+      .layer#{$i} {
+        $size: #{calc($i / 100)}rem;
+        width: $size;
+        height: $size;
+        box-shadow: getShadows($count);
+        animation: skyRotate $duration linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes skyRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

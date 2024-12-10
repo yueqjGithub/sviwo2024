@@ -12,7 +12,7 @@ const GolfPage:FC = () => {
         src={'/golf_bg.png'}
         width={1920}
         height={1080}
-        className="w-full h-[108rem] md:h-screen"
+        className="w-full h-[108rem]"
       ></Image>
       <Volt></Volt>
       <FeatureSection></FeatureSection>

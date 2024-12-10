@@ -9,7 +9,7 @@ import styles from './index.module.scss'
 const Volt: FC = () => {
   const t = useTranslations("Golf")
   return (
-    <motion.div layout className="w-full relative h-[108rem] md:h-screen bg-no-repeat bg-auto bg-center overflow-hidden pl-96" style={{ backgroundImage: "url('/golf_2.png')" }}>
+    <motion.div layout className="w-full relative bg-white h-[108rem] md:h-screen bg-no-repeat bg-auto bg-center overflow-hidden pl-96" style={{ backgroundImage: "url('/golf_2.png')" }}>
       <motion.div className='h-full flex flex-col justify-center items-center bg-[rgba(0,0,0,0.5)] w-max px-28 py-16' transition={{ duration: 1, ease: 'easeInOut' }}
         whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} viewport={{ amount: 0.8, once: true }}
       >

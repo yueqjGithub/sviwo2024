@@ -45,10 +45,10 @@ const IntroSection: FC = () => {
               _icons.map((item, idx) => {
                 return (
                   <motion.div key={item}
-                    className='max-w-full flex flex-row justify-start items-center mb-2 text-xl text-[#F16123]'
+                    className='max-w-full flex flex-row justify-start items-center mb-2 text-2xl text-[#F16123]'
                     initial={{ y: '100%', opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, ease: 'easeInOut', delay: idx * 0.1 }}
                   >
-                    <div className="bg-[#505050] w-10 h-10 rounded-full flex flex-row justify-center items-center text-white text-xl mr-8">
+                    <div className="bg-[#505050] w-10 h-10 rounded-full overflow-hidden flex flex-row justify-center items-center text-white text-xl mr-8">
                       <i className={`iconfont ${item}`}></i>
                     </div>
                     <div>{t(`Intros_${idx + 1}`)}</div>
@@ -56,7 +56,7 @@ const IntroSection: FC = () => {
                 )
               })
             }
-            <div className="w-full flex flex-row justify-start items-start">
+            <div className="w-full flex flex-row justify-start items-start mb-4">
               <div className="flex w-1/4 flex-col justify-start items-center">
                 <div className="text-white w-full py-2 flex flex-row justify-center items-center bg-[#f16123] text-2xl font-semibold mb-4">{t('Intros_label_1')}</div>
                 <Image
@@ -67,9 +67,9 @@ const IntroSection: FC = () => {
                   width={228}
                   height={228}
                 ></Image>
-                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-xl leading-normal">{t('Intros_options_1')}</div>
-                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-xl leading-normal">{t('Intros_options_2')}</div>
-                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-xl leading-normal">{t('Intros_options_3')}</div>
+                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-2xl leading-normal">{t('Intros_options_1')}</div>
+                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-2xl leading-normal">{t('Intros_options_2')}</div>
+                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-2xl leading-normal">{t('Intros_options_3')}</div>
               </div>
               <div className="flex w-1/4 flex-col justify-start items-center ml-6">
                 <div className="text-white w-full py-2 flex flex-row justify-center items-center bg-[#f16123] text-2xl font-semibold mb-4">{t('Intros_label_2')}</div>
@@ -81,8 +81,8 @@ const IntroSection: FC = () => {
                   width={228}
                   height={228}
                 ></Image>
-                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-xl leading-normal">{t('Intros_options_4')}</div>
-                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-xl leading-normal">{t('Intros_options_5')}</div>
+                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-2xl leading-normal">{t('Intros_options_4')}</div>
+                <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-2xl leading-normal">{t('Intros_options_5')}</div>
               </div>
             </div>
           </div>

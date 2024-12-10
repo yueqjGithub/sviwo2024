@@ -1,0 +1,8 @@
+.testBg {
+  background-color: transparent;
+    background-image: radial-gradient(transparent 1px, rgb(15, 17, 21) 1px);
+    background-size: 4px 4px;
+    backdrop-filter: blur(3px);
+    mask: linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+    opacity: 1;
+}

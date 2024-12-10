@@ -7,10 +7,10 @@ import { motion } from "motion/react";
 const PadSection: FC = () => {
   const t = useTranslations('Atv')
   return (
-    <div className="w-full h-[108rem] md:h-screen overflow-hidden relative">
+    <div className="w-full h-[108rem] md:h-screen overflow-hidden relative bg-[#9d9d9d]">
       <Image
         src={'/3_bg.png'}
-        className="w-full h-full"
+        className="w-full h-[108rem] md:h-screen object-contain"
         width={1920}
         height={1080}
         alt="bg"
