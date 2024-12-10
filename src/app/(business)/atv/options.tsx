@@ -1,6 +1,6 @@
 'use client'
 import { FC } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
@@ -39,7 +39,7 @@ const itemVariants = {
 const OptionsSection:FC = () => {
   const t = useTranslations('Atv')
   return (
-    <div className="w-full h-full overflow-hidden flex flex-col justify-end items-center bg-[#9D9D9D]">
+    <div className="w-full h-full overflow-hidden flex flex-col justify-end items-center bg-[#e4e4e4]">
       <div className="w-1/2 flex-1 flex flex-col justify-center items-center">
         {
           _options.map((item, idx) => {
@@ -53,21 +53,24 @@ const OptionsSection:FC = () => {
                 viewport={{ once: true }}
                 className='w-full flex flex-row justify-between items-center py-4 border-b border-white border-dotted text-white text-3xl last:border-b-0'
               >
-                <div className="flex-1">{t(`Section_2_${item.key}`)}</div>
-                <div className="w-1/4 italic">{item.value}</div>
+                <div className="flex-1 drop-shadow-lg">{t(`Section_2_${item.key}`)}</div>
+                <div className="w-1/4 italic drop-shadow-lg">{item.value}</div>
               </motion.div>
             )
           })
         }
       </div>
-      <Image
+      {/* <Image
         src={'/csym_img.png'}
         alt="csym"
         className="w-1/4 h-auto"
         width={701}
         height={402}
       ></Image>
-      <div className="w-full bg-black h-10"></div>
+      <div className="w-full bg-black h-10"></div> */}
+      <div className="w-full h-[30rem] flex flex-row justify-center items-center">
+        <video preload="auto" src="/video2.mp4" autoPlay loop muted controls={false} className="h-full object-scale-down"></video>
+      </div>
     </div>
   )
 }

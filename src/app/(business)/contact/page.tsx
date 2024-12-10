@@ -85,12 +85,11 @@ const ContactPage: FC = () => {
             ></Image>
             <div className="flex flex-col justify-start items-center text-2xl text-white w-[50rem]">
               <div className={`flex-row flex-jst-start items-center py-4 px-12 bg-[#B3B3B3] rounded-2xl w-[50rem] mb-11 flex ${emailError ? styles.danger : ''}`}>
-                <div className="flex-1 flex flex-row justify-end items-center mr-[2rem]">{t('Email')}:</div>
-                <input type="text" className="block flex-5 appearance-none text-white bg-transparent outline-none" onInput={(e) => checkEmail(e.currentTarget.value)}/>
+                <input placeholder={`${t('Email')}:`} type="text" className="placeholder:italic placeholder:text-white block flex-5 appearance-none text-white bg-transparent outline-none focus-within:placeholder:text-transparent" onInput={(e) => checkEmail(e.currentTarget.value)}/>
               </div>
               <div className={`flex-row flex-jst-start items-start py-4 px-12 bg-[#B3B3B3] rounded-2xl w-[50rem] mb-11 flex ${messageError ? styles.danger : ''}`}>
-                <div className="flex-1 flex flex-row justify-end items-center mr-[2rem]">{t('Message')}:</div>
-                <textarea maxLength={200} name="message" rows={8} className="block flex-5 resize-none appearance-none text-white bg-transparent outline-none"
+                {/* <div className="flex-1 flex flex-row justify-end items-center mr-[2rem]">{t('Message')}:</div> */}
+                <textarea placeholder={`${t('Message')}:`} maxLength={200} name="message" rows={8} className="placeholder:italic placeholder:text-white block flex-5 resize-none appearance-none text-white bg-transparent outline-none focus-within:placeholder:text-transparent"
                   onInput={(e) => checkMessage(e.currentTarget.value)}
                 ></textarea>
               </div>

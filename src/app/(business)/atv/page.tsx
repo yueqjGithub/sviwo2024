@@ -34,13 +34,16 @@ const AtvPage:FC = () => {
           height={1080}
           className="w-full h-[108rem] md:h-screen object-cover"
         ></Image>
-        <Image
+        {/* <Image
           src={'/atv_7.png'}
           alt="atv_6"
           width={1920}
           height={1080}
           className="w-full h-[108rem] md:h-screen object-cover"
-        ></Image>
+        ></Image> */}
+        <div className="w-full h-[108rem] md:h-screen bg-[#9D9D9D]">
+          <video src="/video1.mp4" muted controls={false} autoPlay={true} loop={true} className="w-full h-full object-cover"></video>
+        </div>
       </div>
     </>
   )
