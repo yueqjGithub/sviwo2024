@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl"
 const MechineSection: FC = () => {
   const t = useTranslations('Atv')
   return (
-    <div className="w-full h-[108rem] md:h-screen bg-[#9D9D9D] overflow-hidden flex flex-col justify-around items-center">
+    <motion.div layout animate={{ opacity: 1 }} initial={{ opacity: 0 }} className="w-full h-[108rem] md:h-screen bg-[#9D9D9D] overflow-hidden flex flex-col justify-around items-center">
       <div className="w-full flex flex-row justify-start items-center">
         <motion.div
           className='w-2/3 px-48 py-20 rounded-se-3xl rounded-ee-3xl bg-[#260835] text-4xl text-white flex flex-row justify-around items-center'
@@ -52,7 +52,7 @@ const MechineSection: FC = () => {
           
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

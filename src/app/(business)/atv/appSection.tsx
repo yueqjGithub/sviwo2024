@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 const AppSection: FC = () => {
   const t = useTranslations('Atv')
   return (
-    <div className="w-full h-[108rem] md:h-screen overflow-hidden bg-gradient-to-tr from-[#1A082F] to-[#010105] flex flex-row justify-between items-center px-60 py-52">
+    <div className="w-full h-[108rem] md:h-screen overflow-hidden bg-gradient-to-tr from-[#1A082F] to-[#010105] flex flex-row justify-between items-center px-60 py-52 md:snap-center scroll-smooth">
       <motion.div
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
