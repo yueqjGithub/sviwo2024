@@ -39,7 +39,7 @@ const itemVariants = {
 const OptionsSection:FC = () => {
   const t = useTranslations('Atv')
   return (
-    <div className="w-full h-full overflow-hidden flex flex-col justify-end items-center bg-[#e4e4e4]">
+    <div className="w-full h-full overflow-hidden flex flex-col justify-end items-center bg-[#9D9D9D]">
       <div className="w-1/2 flex-1 flex flex-col justify-center items-center">
         {
           _options.map((item, idx) => {

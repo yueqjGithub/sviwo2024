@@ -14,6 +14,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const pingfang = localFont({
+  src: './fonts/PingFang_Medium_downcc.otf',
+  variable: "--font-pingfang",
+  weight: "100 900",
+})
 
 export const metadata: Metadata = {
   title: "SVIWO",
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pingfang.variable} antialiased`}
       >
         <StoreProvider>
           <RootLayoutProvider>
