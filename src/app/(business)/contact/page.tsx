@@ -5,6 +5,7 @@ import { FC, useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import styles from './index.module.scss'
+import NavComp from "@/app/components/nav";
 
 const regs = {
   email: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
@@ -61,7 +62,8 @@ const ContactPage: FC = () => {
   }
 
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative overflow-hidden">
+      <NavComp></NavComp>
       <Image
         alt="bg"
         src={'/start_bg.png'}

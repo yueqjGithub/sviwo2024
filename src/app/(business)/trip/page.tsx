@@ -4,11 +4,13 @@ import { FC } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
+import NavComp from "@/app/components/nav";
 
 const TripPage: FC = () => {
   const t = useTranslations("Trip")
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative overflow-hidden">
+      <NavComp></NavComp>
       <Image
         alt="bg"
         src={'/start_bg.png'}

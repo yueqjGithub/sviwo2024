@@ -5,6 +5,7 @@ import { FC } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 import Sky from "./components/sky";
+import NavComp from "@/app/components/nav";
 
 type Props = {
   goNextSection: () => void
@@ -13,7 +14,8 @@ type Props = {
 const TopSection: FC<Props> = ({ goNextSection }) => {
   const t = useTranslations('Atv')
   return (
-    <div className="w-full h-[108rem] md:h-screen relative overflow-hidden">
+    <div className="w-full h-[108rem] md:h-screen relative overflow-hidden md:snap-center">
+      <NavComp></NavComp>
       {/* <Image
         alt="bg"
         src={'/start_bg.png'}

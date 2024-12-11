@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useRef } from "react";
+import { FC } from "react";
 import TopSection from "./top";
 import OptionsSection from "./options";
 // import MechineSection from "./mechine";
@@ -11,11 +11,11 @@ import Image from "next/image";
 // import styles from './page.module.scss'
 
 const AtvPage: FC = () => {
-  const sectionRef = useRef<HTMLDivElement>(null)
 
   const _showSecondSection = () => {
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' })
+    const _target = document.getElementById('atv_section_two')
+    if (_target) {
+      _target.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -27,8 +27,9 @@ const AtvPage: FC = () => {
 
   return (
     <>
-      <TopSection goNextSection={_showSecondSection}></TopSection>
-      <div className="w-full h-[108rem] md:h-screen relative md:overflow-y-scroll scroll-smooth md:snap-y md:snap-mandatory" id="atv_section_two" ref={sectionRef}>
+      <div className="w-full h-[108rem] md:h-screen relative md:overflow-y-scroll scroll-smooth md:snap-y md:snap-mandatory"
+      >
+        <TopSection goNextSection={_showSecondSection}></TopSection>
         <OptionsSection></OptionsSection>
         {/* <MechineSection></MechineSection> */}
         <ProtectionSection></ProtectionSection>

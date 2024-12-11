@@ -1,9 +1,11 @@
 import { FC } from "react";
 import Image from "next/image";
+import NavComp from "@/app/components/nav";
 
 const BatteryPage:FC = () => {
   return (
-    <div className="w-full bg-[#ECEBEC] h-screen overflow-auto">
+    <div className="w-full bg-[#ECEBEC] h-screen overflow-auto relative">
+      <NavComp></NavComp>
       <Image
         src={'/Battery_img.png'}
         className="w-full h-auto md:h-screen block sticky top-0 z-10"

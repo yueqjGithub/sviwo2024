@@ -3,10 +3,12 @@ import Image from "next/image";
 import Volt from "./volt";
 import FeatureSection from "./feature";
 import IntroSection from "./intro";
+import NavComp from "@/app/components/nav";
 
 const GolfPage:FC = () => {
   return (
-    <div className="w-full">
+    <div className="w-full relative">
+      <NavComp></NavComp>
       <Image
         alt="golf"
         src={'/golf_bg.png'}
