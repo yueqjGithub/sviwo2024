@@ -8,7 +8,8 @@ import ProtectionSection from "./protection";
 // import PadSection from "./pad";
 import AppSection from "./appSection";
 import Image from "next/image";
-// import styles from './page.module.scss'
+import styles from './page.module.scss'
+import { motion } from "motion/react";
 
 const AtvPage: FC = () => {
 
@@ -49,8 +50,10 @@ const AtvPage: FC = () => {
           height={1080}
           className="w-full h-[108rem] md:h-screen object-cover"
         ></Image> */}
-        <div className="w-full h-[108rem] md:h-screen bg-[#9D9D9D] md:snap-center scroll-smooth">
-          <video src="/video1.mp4" muted controls={false} autoPlay={true} loop={true} className="w-full h-full object-cover"></video>
+        <div className={`w-full h-[108rem] md:h-screen bg-[#9D9D9D] md:snap-center scroll-smooth flex flex-row justify-center items-center ${styles.lastBg}`}>
+          <motion.div layout initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="w-1/3 rounded-[2rem] overflow-hidden drop-shadow-sm">
+            <video src="/video1.mp4" muted controls={false} autoPlay={true} loop={true} className="w-full h-auto object-cover"></video>
+          </motion.div>
         </div>
         {/* controls */}
         {/* <div className={`absolute right-8 bottom-8 flex flex-row justify-center items-center w-24 h-24 rounded-full bg-[rgba(0,0,0,0.2)] cursor-pointer ${styles.testBg}`}
