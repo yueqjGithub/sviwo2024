@@ -39,7 +39,7 @@ const IntroSection: FC = () => {
         </motion.div>
       </div>
       <div className="flex-1 w-full min-h-0 overflow-y-scroll md:snap-y md:snap-mandatory" ref={scrollRef}>
-        <div className={`w-full overflow-hidden flex flex-row justify-between items-center py-20 px-96 md:snap-center ${styles.scrollSection}`}>
+        <div className={`w-full overflow-hidden flex flex-row justify-between items-center py-16 px-96 md:snap-center ${styles.scrollSection}`}>
           <div className="flex-1 flex flex-col justify-end items-start">
             {
               _icons.map((item, idx) => {
@@ -59,28 +59,32 @@ const IntroSection: FC = () => {
             <div className="w-full flex flex-row justify-start items-start mb-4">
               <div className="flex w-1/3 flex-col justify-start items-center">
                 <div className="text-white w-full py-2 flex flex-row justify-center items-center bg-[#f16123] text-2xl font-semibold mb-4">{t('Intros_label_1')}</div>
+                <div className="w-full h-72 flex flex-row justify-center items-center">
                 <Image
                   src={'/golf4_img2.png'}
-                  className="w-full h-60"
+                  className="w-2/3 h-auto"
                   objectFit="contain"
                   alt='golf'
                   width={228}
                   height={228}
                 ></Image>
+                </div>
                 <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-3xl leading-normal">{t('Intros_options_1')}</div>
                 <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-3xl leading-normal">{t('Intros_options_2')}</div>
                 <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-3xl leading-normal">{t('Intros_options_3')}</div>
               </div>
               <div className="flex w-1/3 flex-col justify-start items-center ml-6">
                 <div className="text-white w-full py-2 flex flex-row justify-center items-center bg-[#f16123] text-2xl font-semibold mb-4">{t('Intros_label_2')}</div>
+                <div className="w-full h-72 flex flex-row justify-center items-center">
                 <Image
                   src={'/golf4_img3.png'}
-                  className="w-full h-60"
+                  className="w-2/3 h-auto"
                   objectFit="contain"
                   alt='golf'
                   width={228}
                   height={228}
                 ></Image>
+                </div>
                 <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-3xl leading-normal">{t('Intros_options_4')}</div>
                 <div className="w-full flex flex-row justify-start items-center text-[#F16123] text-3xl leading-normal">{t('Intros_options_5')}</div>
               </div>
@@ -192,13 +196,13 @@ const IntroSection: FC = () => {
             </motion.div>
           </div>
         </div>
-        <div className={`w-full overflow-hidden ${styles.scrollSection} md:snap-center p-12`}>
+        <div className={`w-full overflow-hidden ${styles.scrollSection} md:snap-center p-12 bg-white flex flex-row justify-center items-center`}>
           <Image
             src={'/golf_last.png'}
             alt=""
             width={1801}
             height={1026}
-            className="w-full h-full"
+            className="w-[60%] h-auto"
           ></Image>
         </div>
       </div>

@@ -24,8 +24,8 @@ const LangSwitch: FC<Props> = ({ currentColor }) => {
           {expand && <motion.div animate={{ scaleY: 1, opacity: 1 }} exit={{ scaleY: 0, opacity: 0 }}
             className="flex flex-col justify-centerrounded-lg shadow-sm bg-white rounded-lg overflow-hidden"
           >
-            <div onClick={() => { setLocale('en-US'); setExpand(false) }} className="py-3 px-4 border-b border-dashed border-gray-500 hover:bg-gray-300">English</div>
-            <div onClick={() => { setLocale('es-ES'); setExpand(false) }} className="py-3 px-4 hover:bg-gray-300">español</div>
+            <div onClick={() => { setLocale('en-US'); setExpand(false) }} className="py-3 px-4 border-b border-dashed text-black border-gray-500 hover:bg-gray-600 hover:text-white">English</div>
+            <div onClick={() => { setLocale('es-ES'); setExpand(false) }} className="py-3 px-4 hover:bg-gray-600 hover:text-white text-black">español</div>
           </motion.div>}
         </AnimatePresence>
       </div>
