@@ -48,7 +48,7 @@ const TopSection: FC<Props> = ({ goNextSection }) => {
             </motion.div>
           </div>
           <div className="w-[64rem]">
-            <video src="/video3.mp4" autoPlay loop muted className="w-full h-auto left-1/2 top-1/2"></video>
+            <video playsInline={true} src="/video3.mp4" autoPlay loop muted className="w-full h-auto left-1/2 top-1/2"></video>
           </div>
         </div>
       </div>

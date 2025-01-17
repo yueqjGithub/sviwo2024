@@ -52,7 +52,7 @@ const AtvPage: FC = () => {
         ></Image> */}
         <div className={`w-full h-[108rem] md:h-screen bg-[#9D9D9D] md:snap-center scroll-smooth flex flex-row justify-center items-center ${styles.lastBg}`}>
           <motion.div layout initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="w-1/3 rounded-[2rem] overflow-hidden drop-shadow-sm">
-            <video src="/video1.mp4" muted controls={false} autoPlay={true} loop={true} className="w-full h-auto object-cover"></video>
+            <video playsInline={true} src="/video1.mp4" muted controls={false} autoPlay={true} loop={true} className="w-full h-auto object-cover"></video>
           </motion.div>
         </div>
         {/* controls */}
