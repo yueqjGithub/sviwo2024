@@ -4,7 +4,7 @@ import NavComp from "@/app/components/nav";
 
 const BatteryPage:FC = () => {
   return (
-    <div className="w-full bg-[#ECEBEC] h-screen overflow-auto relative">
+    <div className="w-full bg-[#ECEBEC] h-screen overflow-auto relative flex flex-col md:justify-start items-center justify-center">
       <NavComp></NavComp>
       <Image
         src={'/Battery_img.png'}

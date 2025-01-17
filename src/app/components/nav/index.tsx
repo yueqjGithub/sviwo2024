@@ -38,7 +38,7 @@ const NavComp: FC = () => {
       ></Image>
       <div className="flex flex-row justify-start items-center ml-8">
         {
-          MENUS.map((item, idx) => (<motion.div key={item} custom={idx} className='text-white text-[2.8rem] flex-1 flex flex-row justify-end pl-48'
+          MENUS.map((item, idx) => (<motion.div key={item} custom={idx} className='text-white text-[6rem] md:text-[2.8rem] flex-1 flex flex-row justify-end pl-48'
             variants={menuVariants} initial={{ opacity: 0, x: 50 }} animate="open" onMouseEnter={() => { setHover(item) }} onMouseLeave={() => { setHover(undefined) }}
           >
             <div className="flex flex-col justify-start items-center w-max cursor-pointer" onClick={() => { route.push(`/${item.toLowerCase()}`) }}>
@@ -51,7 +51,7 @@ const NavComp: FC = () => {
             </div>
           </motion.div>))
         }
-        <motion.div layout className="flex-1 flex flex-row justify-end items-center pl-48" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+        <motion.div layout className="flex-1 flex flex-row justify-center md:justify-end items-center md:pl-48 pl-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
           <LangSwitch currentColor="#fff"></LangSwitch>
         </motion.div>
       </div>

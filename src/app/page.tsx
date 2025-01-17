@@ -27,16 +27,16 @@ const IndexPage: FC = () => {
   return (
     <div className="w-screen h-screen bg-[#0091DA] relative">
       <Image
-        className={`w-full h-full`}
+        className={`md:w-full h-full object-cover`}
         src={'/index_bg.png'}
         alt="index_bg"
         width={1920}
         height={1080}
       ></Image>
       <div className="absolute w-full h-full top-0 left-0 flex flex-col justify-start items-center">
-        <div className="w-full px-[45rem] pt-[4.5rem] flex flex-row justify-around items-center">
+        <div className="w-full md:px-[45rem] pt-[4.5rem] flex flex-row justify-around items-center">
           {
-            MENUS.map((item, idx) => (<motion.div key={item} custom={idx} className='text-white text-[2.8rem] flex-1 flex flex-row justify-center'
+            MENUS.map((item, idx) => (<motion.div key={item} custom={idx} className='text-white text-[6rem] md:text-[2.8rem] flex-1 flex flex-row justify-center'
               variants={menuVariants} initial={{ opacity: 0, y: 100 }} animate="open" onMouseEnter={() => { setHover(item) }} onMouseLeave={() => { setHover(undefined) }}
             >
               <div className="flex flex-col justify-start items-center w-max cursor-pointer" onClick={() => { route.push(`/${item.toLowerCase()}`) }}>
@@ -49,7 +49,7 @@ const IndexPage: FC = () => {
               </div>
             </motion.div>))
           }
-          <motion.div layout className="flex-1 flex flex-row justify-end items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+          <motion.div layout className="flex-1 flex flex-row justify-center md:justify-end items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <LangSwitch currentColor="#fff"></LangSwitch>
           </motion.div>
         </div>

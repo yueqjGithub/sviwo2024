@@ -25,7 +25,7 @@ const IntroSection: FC = () => {
   const t = useTranslations("Golf")
   const scrollRef = useRef<HTMLDivElement>(null)
   return (
-    <motion.div layout className={`w-full h-[108rem] md:h-screen flex flex-col justify-start items-center overflow-hidden ${styles.introSection}`}>
+    <motion.div layout className={`w-full md:h-screen flex flex-col justify-start items-center overflow-hidden ${styles.introSection}`}>
       <div className='w-full bg-[#231F20]'>
         <motion.div className='w-full' initial={{ x: '100%' }} whileInView={{ x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, ease: 'easeInOut' }}>
           <Image
@@ -38,7 +38,7 @@ const IntroSection: FC = () => {
           ></Image>
         </motion.div>
       </div>
-      <div className="flex-1 w-full min-h-0 overflow-y-scroll md:snap-y md:snap-mandatory" ref={scrollRef}>
+      <div className="flex-1 w-full md:min-h-0 md:overflow-y-scroll md:snap-y md:snap-mandatory" ref={scrollRef}>
         <div className={`w-full overflow-hidden flex flex-row justify-between items-center py-16 px-96 md:snap-center ${styles.scrollSection}`}>
           <div className="flex-1 flex flex-col justify-end items-start">
             {
